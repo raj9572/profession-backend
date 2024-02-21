@@ -5,8 +5,7 @@ import { DB_Name } from "../constants.js";
 
 async function connectDB() {
     try {
-      const connectionInstant = await mongoose.connect(`${process.env.MONGODB_URI}`,
-      {useUnifiedTopology: false});
+      const connectionInstant = await mongoose.connect(`${process.env.MONGODB_URI}`);
       console.log(`/n Mongodb connected !! DB HOST : ${connectionInstant.connection.host}`)
 
         
